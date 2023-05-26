@@ -1,9 +1,12 @@
+import streamlit as st
 import pygsheets
 import pandas as pd
 from datetime import datetime, date, timedelta
 from entsoe import EntsoePandasClient
 import seaborn as sns
 
+st.title('ENTSOE-E API')
+streamlit run streamlit_app.py
 # Connecting to ENTSO-E API
 
 client = EntsoePandasClient(api_key='4b1229d3-1c2c-4fbb-9e43-4d1692208b57')
