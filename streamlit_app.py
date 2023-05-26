@@ -49,7 +49,7 @@ Prices['Date'] = pd.to_datetime(Prices['Date'])
 
 # Unpitoving for Tableau format
 Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
-
+st.map(Prices_unpivoted)
 # Create a section for the dataframe statistics
 st.header('Statistics of Dataframe')
 st.write(Prices.describe())
@@ -69,7 +69,7 @@ st.write(Prices.head())
 #sheet.set_dataframe(Prices_unpivoted, (1,1))
 
 # fig = plt.figure(figsize=(10, 4))
-fig = sns.set(rc={'figure.figsize':(12,9)})
-sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
-st.pyplot(fig)
+#fig = sns.set(rc={'figure.figsize':(12,9)})
+#sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
+#st.pyplot(fig)
 
