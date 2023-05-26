@@ -57,7 +57,7 @@ def Prices_Query():
     return Prices_unpivoted
 # Create a section for the dataframe statistics
 st.header('Statistics of Dataframe')
-st.write(Prices.describe())
+st.write(Prices_unpivoted.describe())
 
 
 # google sheets authentication
