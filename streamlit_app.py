@@ -58,4 +58,4 @@ Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 
 
 sns.set(rc={'figure.figsize':(12,9)})
-sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
+print(sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country'))
