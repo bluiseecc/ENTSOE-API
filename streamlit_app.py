@@ -54,7 +54,7 @@ def Prices_Query():
 
     sns.set(rc={'figure.figsize':(12,9)})
     sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
-return Prices_unpivoted
+    return Prices_unpivoted
 # Create a section for the dataframe statistics
 st.header('Statistics of Dataframe')
 st.write(Prices.describe())
