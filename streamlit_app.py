@@ -6,7 +6,7 @@ from entsoe import EntsoePandasClient
 import seaborn as sns
 
 st.title('ENTSOE-E API')
-streamlit run streamlit_app.py
+
 # Connecting to ENTSO-E API
 
 client = EntsoePandasClient(api_key='4b1229d3-1c2c-4fbb-9e43-4d1692208b57')
@@ -62,3 +62,5 @@ Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 
 sns.set(rc={'figure.figsize':(12,9)})
 print(sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country'))
+
+streamlit run streamlit_app.py
