@@ -4,6 +4,7 @@ import pandas as pd
 from datetime import datetime, date, timedelta
 from entsoe import EntsoePandasClient
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 st.title('ENTSOE-E API')
 
@@ -67,7 +68,8 @@ st.write(Prices.head())
 #sheet = wb.worksheet_by_title('Price')
 #sheet.set_dataframe(Prices_unpivoted, (1,1))
 
-
-# sns.set(rc={'figure.figsize':(12,9)})
-# print(sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country'))
+fig = plt.figure(figsize=(10, 4))
+sns.set(rc={'figure.figsize':(12,9)})
+sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
+st.pyplot(fig)
 
