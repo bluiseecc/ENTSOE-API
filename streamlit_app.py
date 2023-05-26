@@ -50,6 +50,10 @@ Prices['Date'] = pd.to_datetime(Prices['Date'])
 st.header('Statistics of Dataframe')
 st.write(Prices.describe())
 
+# Create a section for the dataframe header
+st.header('Header of Dataframe')
+st.write(Prices.head())
+
 #Unpitoving for Tableau format
 #Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 
