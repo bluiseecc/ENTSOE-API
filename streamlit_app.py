@@ -45,7 +45,10 @@ Prices['Country'].replace(to_replace= 'GB',value='UK', inplace= True)
 
 Prices['Date'] = Prices.index.astype(str).str[:-6]
 Prices['Date'] = pd.to_datetime(Prices['Date'])
-st.map('Prices')
+
+# Create a section for the dataframe statistics
+st.header('Statistics of Dataframe')
+st.write(Prices.describe())
 
 #Unpitoving for Tableau format
 #Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
