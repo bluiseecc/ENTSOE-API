@@ -56,8 +56,8 @@ def Prices_Query():
     sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
     return Prices_unpivoted
 # Create a section for the dataframe statistics
-st.header('Statistics of Dataframe')
-st.write(Prices_unpivoted.describe())
+#st.header('Statistics of Dataframe')
+#st.write(Prices_unpivoted.describe())
 
 
 # google sheets authentication
