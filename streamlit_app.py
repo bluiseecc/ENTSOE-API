@@ -6,6 +6,11 @@ from entsoe import EntsoePandasClient
 import seaborn as sns
 
 st.title('ENTSOE-E API')
+st.text('This is a web app to allow exploration of Earthquake Data')
+
+# Create a section for the dataframe statistics
+st.header('Statistics of Dataframe')
+st.write(df.describe())
 
 # Connecting to ENTSO-E API
 
