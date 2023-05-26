@@ -69,7 +69,7 @@ st.write(Prices.head())
 #sheet.set_dataframe(Prices_unpivoted, (1,1))
 
 # fig = plt.figure(figsize=(10, 4))
-fig, sns.set(rc={'figure.figsize':(12,9)})
-sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
+# fig = sns.set(rc={'figure.figsize':(12,9)})
+fig = sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
 st.pyplot(fig)
 
