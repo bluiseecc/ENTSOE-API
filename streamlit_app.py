@@ -49,7 +49,7 @@ Prices['Date'] = pd.to_datetime(Prices['Date'])
 
 # Unpitoving for Tableau format
 Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
-st.map(Prices_unpivoted)
+
 # Create a section for the dataframe statistics
 st.header('Statistics of Dataframe')
 st.write(Prices.describe())
@@ -57,6 +57,13 @@ st.write(Prices.describe())
 # Create a section for the dataframe header
 st.header('Header of Dataframe')
 st.write(Prices.head())
+
+titanic = sns.load_dataset("titanic")
+
+fig = plt.figure(figsize=(10, 4))
+sns.countplot(x="class", data=titanic)
+
+st.pyplot(fig)
 
 
 # google sheets authentication
