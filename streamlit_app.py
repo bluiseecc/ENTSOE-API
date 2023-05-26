@@ -55,8 +55,8 @@ st.write(Prices.describe())
 st.header('Header of Dataframe')
 st.write(Prices.head())
 
-#Unpitoving for Tableau format
-#Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
+# Unpitoving for Tableau format
+Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 
 
 # google sheets authentication
