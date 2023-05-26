@@ -58,11 +58,11 @@ st.write(Prices.describe())
 st.header('Header of Dataframe')
 st.write(Prices.head())
 
-titanic = sns.load_dataset("titanic")
+#titanic = sns.load_dataset("titanic")
 
 fig = plt.figure(figsize=(10, 4))
-sns.countplot(x="class", data=titanic)
-
+#sns.countplot(x="class", data=titanic)
+sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
 st.pyplot(fig)
 
 
