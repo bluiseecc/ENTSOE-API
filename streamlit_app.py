@@ -61,7 +61,6 @@ st.map('Prices')
 #sheet.set_dataframe(Prices_unpivoted, (1,1))
 
 
-sns.set(rc={'figure.figsize':(12,9)})
-print(sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country'))
+# sns.set(rc={'figure.figsize':(12,9)})
+# print(sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country'))
 
-st run streamlit_app.py
