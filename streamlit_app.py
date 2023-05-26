@@ -63,4 +63,4 @@ Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 sns.set(rc={'figure.figsize':(12,9)})
 print(sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country'))
 
-streamlit run streamlit_app.py
+st run streamlit_app.py
