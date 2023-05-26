@@ -8,9 +8,6 @@ import seaborn as sns
 st.title('ENTSOE-E API')
 st.text('This is a web app to allow exploration of Earthquake Data')
 
-# Create a section for the dataframe statistics
-st.header('Statistics of Dataframe')
-st.write(df.describe())
 
 # Connecting to ENTSO-E API
 
@@ -55,6 +52,14 @@ Prices['Date'] = pd.to_datetime(Prices['Date'])
 Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 
 
+sns.set(rc={'figure.figsize':(12,9)})
+sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
+
+# Create a section for the dataframe statistics
+st.header('Statistics of Dataframe')
+st.write(Prices.describe())
+
+
 # google sheets authentication
 #creds = '/Users/brunoluis/Jupyter/Projects /ENTSO API/root-gist-358222-ff123e36322d.json'
 #api = pygsheets.authorize(service_file=creds)
@@ -65,5 +70,3 @@ Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 #sheet.set_dataframe(Prices_unpivoted, (1,1))
 
 
-sns.set(rc={'figure.figsize':(12,9)})
-sns.lineplot(data = Prices_unpivoted,x = 'Date', y = 'value', hue = 'Country')
