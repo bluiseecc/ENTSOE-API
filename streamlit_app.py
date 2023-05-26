@@ -48,13 +48,13 @@ Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 
 
 # google sheets authentication
-creds = '/Users/brunoluis/Jupyter/Projects /ENTSO API/root-gist-358222-ff123e36322d.json'
-api = pygsheets.authorize(service_file=creds)
-wb = api.open('ENTSO-E')
+#creds = '/Users/brunoluis/Jupyter/Projects /ENTSO API/root-gist-358222-ff123e36322d.json'
+#api = pygsheets.authorize(service_file=creds)
+#wb = api.open('ENTSO-E')
 
 # open the sheet by name
-sheet = wb.worksheet_by_title('Price')
-sheet.set_dataframe(Prices_unpivoted, (1,1))
+#sheet = wb.worksheet_by_title('Price')
+#sheet.set_dataframe(Prices_unpivoted, (1,1))
 
 
 sns.set(rc={'figure.figsize':(12,9)})
