@@ -48,7 +48,7 @@ Prices_unpivoted = Prices.melt(id_vars = ['Country','Date'])
 
 
 # google sheets authentication
-creds = '/Users/brunoluis/Jupyter/Projects /ENTSO API/root-gist-358222-ff123e36322d.json'
+creds = 'root-gist-358222-ff123e36322d.json'
 api = pygsheets.authorize(service_file=creds)
 wb = api.open('ENTSO-E')
 
